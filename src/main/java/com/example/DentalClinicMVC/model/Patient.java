@@ -9,22 +9,25 @@ public class Patient {
     private String patLastName;
     private Integer patIdentity;
     private LocalDate patAdmission;
+    private String patEmail;
     private Address address;
 
-    public Patient(String patName, String patLastName, Integer patIdentity, LocalDate patAdmission, Address address) {
+    public Patient(String patName, String patLastName, Integer patIdentity, LocalDate patAdmission, String patEmail, Address address) {
         this.patName = patName;
         this.patLastName = patLastName;
         this.patIdentity = patIdentity;
         this.patAdmission = patAdmission;
+        this.patEmail = patEmail;
         this.address = address;
     }
 
-    public Patient(Integer patSec, String patName, String patLastName, Integer patIdentity, LocalDate patAdmission, Address address) {
+    public Patient(Integer patSec, String patName, String patLastName, Integer patIdentity, LocalDate patAdmission, String patEmail, Address address) {
         this.patSec = patSec;
         this.patName = patName;
         this.patLastName = patLastName;
         this.patIdentity = patIdentity;
         this.patAdmission = patAdmission;
+        this.patEmail = patEmail;
         this.address = address;
     }
 
@@ -74,5 +77,13 @@ public class Patient {
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    public String getPatEmail() {
+        return patEmail;
+    }
+
+    public void setPatEmail(String email) {
+        this.patEmail = email;
     }
 }

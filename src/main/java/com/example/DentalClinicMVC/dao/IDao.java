@@ -9,4 +9,5 @@ public interface IDao<T> {
     void update(T t);
     void delete(Integer id);
     List<T> findAll();
+    T findByString(String value);
 }
